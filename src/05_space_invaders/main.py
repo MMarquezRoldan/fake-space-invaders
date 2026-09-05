@@ -50,13 +50,13 @@ while running:
     )
 
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_w]:
+    if keys[pygame.K_w] and player_pos.y > 0:
         player_pos.y -= PLAYER_SPEED * dt
-    if keys[pygame.K_s]:
+    if keys[pygame.K_s] and player_pos.y < screen.get_height() - PLAYER_SIZE:
         player_pos.y += PLAYER_SPEED * dt
-    if keys[pygame.K_a]:
+    if keys[pygame.K_a] and player_pos.x > 0:
         player_pos.x -= PLAYER_SPEED * dt
-    if keys[pygame.K_d]:
+    if keys[pygame.K_d] and player_pos.x < screen.get_width() - PLAYER_SIZE:
         player_pos.x += PLAYER_SPEED * dt
     if keys[pygame.K_SPACE] and shot_timer <= 0:
         bullets.append(
