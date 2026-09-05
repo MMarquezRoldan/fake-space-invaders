@@ -1,0 +1,13 @@
+# Entorno virtual
+.venv/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+
+# Caché de herramientas
+.ruff_cache/
+.pytest_cache/
+
+# Variables de entorno secretas
+.env
